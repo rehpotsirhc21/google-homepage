@@ -12,7 +12,7 @@
             grid-template-rows: 50px;
              grid-template-areas: "about store . gmail image menu sign-in"}
 
-             a {text-decoration: none; color: black; font-size: 13px;font-family: sans-serif;;}
+             a, p {text-decoration: none; color: black; font-size: 13px;font-family: sans-serif;;}
 
              a:hover {text-decoration: underline;}
 
@@ -25,52 +25,95 @@
              background-color: #4683ea; height: 30px; width: 65px; line-height:30px;
              text-align: center; color:white; font-weight: bold; border: 1px solid #4285f4;}
 
-             #main { min-height: 100%  display: grid;
-             grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 250px 70px 70px 250px;
+             #main { min-height: 100%; display: grid;
+             grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 250px 70px 70px  250px;
            grid-template-areas: ". logo ."
-
                                 ". search . "
                                 ". flexbox ."
+                                ". text ."
                                 }
-                    #logo { gird-area: logo; justify-self: center; align-self: center; padding-bottom: 25px;}
+                    #logo { grid-area: logo;  justify-self: center; align-self: end;}
                     #search {grid-area: search; justify-self: center; align-self: center;
                       height: 30px; width: 80%; border: 1px solid rgba(0,0,0,0.151); border-radius: 30px;}
                       #search:focus {box-shadow: 1px, 1px, 5px, grey;}
                       #Search:hover {box-shadow: 1px, 1px, 5px, grey;}
-                    #flexbox { display: flexbox grid-area: flexbox; justify-self: center; align-self: center;}
+                    #flexbox {display: flexbox;  grid-area: flexbox; justify-self: center; align-self: center;}
                     #search_btn {border: none; font-size: 15px; color: #5f6368; margin-right: 25px;
                       padding: 7px 15px 7px 15px; border-radius: 3px;}
                       #lucky_btn{ border: none; font-size: 15px; color: #5f6368;
                       padding: 7px 15px 7px 15px; border-raidus: 3px;}
                       #search_btn:hover {border: 1px solid rgba(0,0,0,0.226);}
                       #lucky_btn:hover {border: 1px solid rgba(0,0,0,0.226);}
+                      #text {grid-area: text; justify-self:center;}
+                      #footer {
+                          position: absolute;
+                          bottom: 0;
+                          display: grid;
+                          grid-template-columns: 100px 100px 150px 1330px 70px 70px 70px;
+                          grid-template-rows: 50px;
+                          grid-template-areas:
+                          "advertising business works . privacy terms settings";
+                      }
+
+                      #advertising {
+                          grid-area: advertising;
+                          justify-self: center;
+                          align-self: center;
+                      }
+                      #business {
+                          grid-area: business;
+                          justify-self: center;
+                          align-self: center;
+                      }
+                      #works {
+                          grid-area: works;
+                          justify-self: center;
+                          align-self: center;
+                      }
+                      #privacy {
+                          grid-area: privacy;
+                          justify-self: center;
+                          align-self: center;
+                      }
+                      #terms {
+                          grid-area: terms;
+                          justify-self: center;
+                          align-self: center;
+                      }
+                      #settings {
+                          grid-area: settings;
+                          justify-self: center;
+                          align-self: center;
+                      }
+
       </style>
     <body>
 
       <div id= "navbar">
-          <a href="#" id= "about">About</a>
-          <a href="#" id= "store">Store</a>
-          <a href="#" id= "gmail">Gmail</a>
-          <a href="#" id= "image">Images</a>
+          <a href="https://about.google/a/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" target= "_blank" id= "about">About</a>
+          <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US" target= "_blank" id= "store">Store</a>
+          <a href="https://www.google.com/gmail/about/" target= "_blank" id= "gmail">Gmail</a>
+          <a href="https://www.google.com/imghp?hl=en&ogbl" target= "_blank" id= "image">Images</a>
           <a href="#" id= "menu"><img src= "https://cdn4.vectorstock.com/i/1000x1000/13/78/menu-icon-vector-21641378.jpg" height="30px" width="30px"</a>
-          <a href="#" id= "sign-in">sign-in</a>
+          <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target= "_blank" id= "sign-in">sign-in</a>
 
         </div>
         <div id="main">
-          <a href id="logo"><img src="https://raw.githubusercontent.com/learn-webdevYT/Google-Homepage/master/logo.png"></a>
-          <input type="text" id= "search">
+          <img id= "logo" src="Google_2015_logo.svg.png">
+                    <input type="text" id= "search">
             <div id= "flexbox">
                 <button id="search_btn"> Google Search</button> <button id= "lucky_btn"> I'm feeling Lucky</button>
 
           </div>
+          <p id= "text">Welcome to Chris's google homepage</p>
         </div>
 
         <div id="footer">
-          <a href="#" id="advertising">Advertising</a>
-          <a href="#" id="business">Business</a>
-          <a href="#" id="works">How Search Works</a>
-          <a href="#" id="privacy">Privacy</a>
-          <a href="#" id="terms">Terms</a>
+          <a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" target= "_blank" id="advertising">Advertising</a>
+          <a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/" target= "_blank" id="business">Business</a>
+          <a href="https://www.google.com/search/howsearchworks/?fg=1" target= "_blank" id="works">How Search Works</a>
+          <a href="https://policies.google.com/privacy?hl=en&fg=1" target= "_blank" id="privacy">Privacy</a>
+          <a href="https://policies.google.com/terms?hl=en&fg=1" id="terms">Terms</a>
           <a href="#" id="settings">Settings</a>
         </div>
       </body>
